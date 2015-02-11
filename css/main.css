@@ -1568,7 +1568,7 @@ hr {
 #portfolio {
 	background: #12151b url( ../images/event_bg2.jpg) no-repeat center center fixed;
 	padding-top: 120px;
-	padding-bottom: 110px;
+	padding-bottom: 120px;
 }
 .ie #portfolio .row.items {
 	width: 1140px;
@@ -1742,7 +1742,7 @@ hr {
 	padding-bottom: 120px;
 }
 #team{
-	background: #a43b0a url(../images/about_bg.jpg) no-repeat bottom center fixed;
+	background: #a43b0a url(../images/brown.jpg) no-repeat bottom center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
@@ -1797,7 +1797,7 @@ hr {
 	top: -6px;
 	font-size: 13px;
 	line-height: 18px;
-	color: #f26522;
+	color: black;
 	display: block;
 }
 #team-wrapper .member-social {
@@ -1812,10 +1812,10 @@ hr {
 	margin-right: 15px;
 }
 #team-wrapper .member-social li a {
-	color: #252525;
+	color: black;
 }
 #team-wrapper .member-social li a:hover {
-	color: #f26522;
+	color: black;
 }
 
 
@@ -2221,3 +2221,6 @@ code {
 	font-style: italic;
 }
 
+.regframe .ss-footer{
+	display: none;
+}
