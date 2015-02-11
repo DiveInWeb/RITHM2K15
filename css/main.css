@@ -1030,11 +1030,12 @@ ul#nav li.current a {
 	background: white;
 	padding-top: 66px;
 	padding-bottom: 102px;
+	padding-left: 0px;
 }
-#content #main {
+#main {
 	padding-top: 6px;
 }
-#content #sidebar {
+#sidebar {
 	padding-top: 12px;
 	padding-left: 30px;
 }
@@ -2221,6 +2222,6 @@ code {
 	font-style: italic;
 }
 
-.regframe .ss-footer{
-	display: none;
+#contest_desc{
+	padding-left: 330px;
 }
