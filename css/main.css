@@ -1569,7 +1569,7 @@ hr {
 #portfolio {
 	background: #12151b url( ../images/event_bg2.jpg) no-repeat center center fixed;
 	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-bottom: 180px;
 }
 .ie #portfolio .row.items {
 	width: 1140px;
