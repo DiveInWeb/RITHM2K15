@@ -110,10 +110,8 @@
   <br>
   <div>
     <img style="padding-left:250px" align="middle" src="images/1.png" alt="logo">
-
-  </div>      
-  <br>
-  <br>
+  </div> 
+  <br>     
   <div align="middle" class="flipTimer">
     <div class="days"></div>
     <div class="hours"></div>
@@ -292,22 +290,75 @@
         "
 
         align="middle">REGISTRATION</p>
-        <iframe class = "regframe" src="https://docs.google.com/forms/d/1mRKcXMdqFXPICGjwRtjLH9N7cOjrMRZNtXQ8d9RNIVM/viewform?embedded=true" width="800" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-      </div>
-    </div>
+        <hr/>
+        <form align="middle" action="" name="registerForm" method="post" id="registerForm">
+          <table cellspacing="15" style="margin-left:50px;">
+            <tbody><tr>
+              <td id="th" ><td><td>Name:</td><td><input type="text" name="regName" size="50"></td>
+            </tr>
+            <tr>
+              <td id="th" ><td><td>College:</td><td><input type="text" name="regCollege" size="50"></td>
+            </tr>
+            <tr>
+              <td id="th"  ><td><td>Email:</td><td><input type="text" name="regEmail" size="50"></td>
+            </tr>
+            <tr>
+              <td id="th" ><td><td>Mobile:</td><td><input type="text" name="regMobile" size="50"></td>
+            </tr>
+            <tr>
+              <td id="th"  ><td><td>Event:</td>
+              <td>
+                <select name="regEvent">
+                  <option  style="color:black" value="null">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -&gt; Select Event &lt;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+                  <optgroup label="SPORTS">
+                   <option value="Volleyball">Volleyball</option>
+                   <option value="Badminton">Badminton</option>
+                   <option value="Basketball">Basketball</option>
+                   <option value="Table Tennis">Table Tennis</option>
+                   <option value="Chess">Chess</option>
+                   <option value="Carroms">Carroms</option>
+                   <option value="Throwball">Throwball</option>
+                 </optgroup>
+                 <optgroup label="CULTURAL">
+                   <option value="Dance">Dance</option>
+                   <option value="Singing">Singing</option>
+                   <option value="Movie Making">Movie Making</option>
+                   <option value="Skit">Skit</option>
+                   <option value="Mime">Mime</option>
+                   <option value="Mimicry">Mimicry</option>
+                 </optgroup>
+                 <optgroup label="TECHNICAL">
+                   <option value="Paper presentation">Paper presentations</option>
+                   <option value="Poster Presentation">Poster Presentation</option>
+                   <option value="Technical Jam">Technical Jam</option>
+                   <option value="Project Expo">Project Expo</option>
+                   <option value="Quiz">Quiz</option>
+                 </optgroup>
 
-    
+               </select>
+             </td>
+           </tr>
+           <tr><td id="th"><td><td>Message:</td><td><textarea name="regMessage" rows="10" cols="50" size="50"></textarea></td>
+           </tr>
+           <tr><td></td><td><td><td><input type="submit" name="Submit" class="button" value="Submit"></td></tr>
+           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+         </tbody></table>
+       </form>
+     </div>
+   </div>
 
-    <div class="bgrid">
 
-      <div class="icon-part">
-      </div>                 
-      <div class="service-content">
-      </div>                              
 
-    </div> <!-- /bgrid -->
+   <div class="bgrid">
 
-  </div> <!-- /service-list -->
+    <div class="icon-part">
+    </div>                 
+    <div class="service-content">
+    </div>                              
+
+  </div> <!-- /bgrid -->
+
+</div> <!-- /service-list -->
 
 </div> <!-- /twelve -->
 
@@ -593,7 +644,11 @@
 class="copyright">&copy; Copyright @rithm2k15</p>        
 </section>  <!-- /contact-->
 
-
+<footer>
+    <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#hero"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+         </div>
+</footer>
 
    <!-- Java Script
    ================================================== -->
@@ -632,10 +687,10 @@ class="copyright">&copy; Copyright @rithm2k15</p>
 direction: 'down',
 
 // the target <a href="http://www.jqueryscript.net/time-clock/">date</a>
-date: 'March 13, 2015 12:00:00',
+date: 'Mar 13, 2015 12:00:00',
 
 // callback works only with direction = "down"
-callback: function() { alert('times up!'); }
+callback: function() { $('.flipTimer').hide }
 
 });
     });

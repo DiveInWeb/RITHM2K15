@@ -217,6 +217,47 @@
    });
 
 
+   $('form#registerForm button.submit').on('click', function() {
+
+      $('#image-loader').fadeIn();
+
+      var regName = $('#registerForm #regName').val();
+      var regCollege = $('#registerForm #regCollege').val();
+      var regEmail = $('#registerForm #regEmail').val();
+      var regMobile = $('#registerForm #regMobile').val();
+      var regEvent = $('#registerForm #regEvent').val();
+      var regMessage = $('#registerForm #regMessage').val();
+
+      var data = 'regName=' + regName  + '&regCollege=' + regCollege + 
+                 '&regEmail=' + regEmail + '&regMobile=' + regMobile + 
+                 '&regEvent=' + regEvent + '&regMessage=' + regMessage;
+
+      $.ajax({
+
+        type: "POST",
+        url: "inc/sendEmail_reg.php",
+        data: data,
+        success: function(msg) {
+
+            // Message was sent
+            if (msg == 'OK') {
+               $('#image-loader').fadeOut();
+               $('#message-warning').hide();
+               $('#contactForm').fadeOut();
+               $('#message-success').fadeIn();   
+            }
+            // There was an error
+            else {
+               $('#image-loader').fadeOut();
+               $('#message-warning').html(msg);
+              $('#message-warning').fadeIn();
+            }
+
+        }
+
+      });
+      return false;
+   });
 	/*-----------------------------------------------------*/
   	/* Back to top
    ------------------------------------------------------ */ 
