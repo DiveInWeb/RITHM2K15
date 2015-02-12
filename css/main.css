@@ -1952,6 +1952,24 @@ hr {
 #message-warning i, #message-success i {
 	margin-right: 10px;
 }
+
+#reg-message-warning, #reg-message-success {
+	display: none;
+	background: black;
+	padding: 24px 24px;
+	margin-bottom: 42px;
+	border-radius: 3px;
+}
+#reg-message-warning {
+	color: #ff6163;
+}
+#reg-message-success {
+	color: #ffd900;
+}
+#reg-message-warning i, #reg-message-success i {
+	margin-right: 10px;
+}
+
 #image-loader {
 	display: none;
 	text-align: center;
@@ -2179,7 +2197,7 @@ figure:nth-child(8) {
 	margin: -100px 0 0 0;
 	position: absolute;
 	left: 0;
-	top:27%;
+	top:26%;
 	font-family: Arial, Geneva, SunSans-Regular, sans-serif;
 	font-size: 14px;
 	color: #333;
@@ -2262,6 +2280,10 @@ td{
 
 }
 
-form #registerForm{
+#registerForm{
 	padding-left: 20%;
+}
+
+option,optgroup {
+	color: black;
 }

@@ -6,12 +6,12 @@ $siteOwnersEmail = 'rakeshnitcalicut@gmail.com';
 
 if($_POST) {
 
-   $name = trim(stripslashes($_POST['regName']));
-   $college = trim(stripslashes($_POST['regCollege']));
-   $email = trim(stripslashes($_POST['regEmail']));
-   $mobile = trim(stripslashes($_POST['regMobile']));
-   $contact_message = trim(stripslashes($_POST['regMessage']));
-   $event = trim(stripslashes($_POST['regEvent']));
+	$name = trim(stripslashes($_POST['regName']));
+	$college = trim(stripslashes($_POST['regCollege']));
+	$email = trim(stripslashes($_POST['regEmail']));
+	$mobile = trim(stripslashes($_POST['regMobile']));
+	$contact_message = trim(stripslashes($_POST['regMessage']));
+	$event = trim(stripslashes($_POST['regEvent']));
 
    // Check First Name
 	if (strlen($name) < 2) {
@@ -31,43 +31,46 @@ if($_POST) {
 	}
 
 	//Check Event Submission
-	if (strlen($event) < 2) {
+	if ($event == "null") {
 		$error['event'] = "Please select an event";
 	}
-
    // Set Message
-   $message .= "Email from: " . $name . "<br />";
+	$message .= "Email from: " . $name . "<br />";
 	$message .= "Email address: " . $email . "<br />";
-   $message .= "Message: <br />";
-   $message .= $contact_message;
-   $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
+	$message .= "Mobile Number : " . $mobile . "<br/>";
+	$message .= "College Name : " . $college . "<br/>";
+	$message .= "Event : " . $event . "<br/>";
+	$message .= "Message [ Optional ] : " . $contact_message . "<br/>";
+	$message .= "<br /> ----- <br /> This email was sent from your site's Registration form. <br />";
 
    // Set From: header
-   $from =  $name . " <" . $email . ">";
+	$from =  $name . " <" . $email . ">";
 
    // Email Headers
 	$headers = "From: " . $from . "\r\n";
 	$headers .= "Reply-To: ". $email . "\r\n";
- 	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 
-   if (!$error) {
+	if (!$error) {
 
       ini_set("sendmail_from", $siteOwnersEmail); // for windows server
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
-		if ($mail) { echo "OK"; }
+      if ($mail) { echo "OK"; }
       else { echo "Something went wrong. Please try again."; }
-		
+
 	} # end if - no validation error
 
 	else {
 
-		$response = (isset($error['fname'])) ? $error['fname'] . "<br /> \n" : null;
-		$response .= (isset($error['lname'])) ? $error['lname'] . "<br /> \n" : null;
+		$response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
+		$response .= (isset($error['college'])) ? $error['college'] . "<br /> \n" : null;
 		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
-		$response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
+		$response .= (isset($error['mobile'])) ? $error['mobile'] . "<br />" : null;
+		$response .= (isset($error['event'])) ? $error['event'] . "<br />" : null;
+
 		
 		echo $response;
 
