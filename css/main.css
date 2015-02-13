@@ -39,125 +39,7 @@
 /* b. Document Setup
 /* =================================================================== */
 
-img.rak{
 
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-
-
-
-
-
-.css-slideshow{
-	position: relative;
-	max-width: 495px;
-	height: 370px;
-	margin: 5em auto .5em auto;
-}
-.css-slideshow figure{
-	margin: 0;
-	max-width: 495px;
-	height: 370px;
-	background: #000;
-	position: absolute;
-}
-.css-slideshow img{
-	box-shadow: 0 0 2px #666;
-}
-.css-slideshow figcaption{
-	position: absolute;
-	top: 0;
-	color: #fff;
-	background: rgba(0,0,0, .3);
-	font-size: .8em;
-	padding: 8px 12px;
-	opacity: 0;
-	-webkit-transition: opacity .5s;
-	-moz-transition: opacity .5s;
-}
-.css-slideshow:hover figure figcaption{
-	-webkit-transition: opacity .5s;
-	-moz-transition: opacity .5s;
-	opacity: 1;
-}
-.css-slideshow-attr{
-	max-width: 495px;
-	text-align: right;
-	font-size: .7em;
-	font-style: italic;
-	margin:0 auto;
-}
-.css-slideshow-attr a{
-	color: #666;
-}
-.css-slideshow figure{
-	opacity:0;
-}
-
-
-@-webkit-keyframes xfade{
-	0%{
-		opacity: 1;
-	}
-	10.5% {
-		opacity: 1;
-	}
-	12.5%{
-		opacity: 0;
-	}
-	98% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@-moz-keyframes xfade{
-	0%{
-		opacity: 1;
-	}
-	10.5% {
-		opacity: 1;
-	}
-	12.5%{
-		opacity: 0;
-	}
-	98% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-figure:nth-child(1) {
-	-webkit-animation: xfade 48s 42s infinite;
-}
-figure:nth-child(2) {
-	-webkit-animation: xfade 48s 36s infinite;
-}
-figure:nth-child(3) {
-	-webkit-animation: xfade 48s 30s infinite;
-}
-figure:nth-child(4) {
-	-webkit-animation: xfade 48s 24s infinite;
-}
-figure:nth-child(5) {
-	-webkit-animation: xfade 48s 18s infinite;
-}
-figure:nth-child(6) {
-	-webkit-animation: xfade 48s 12s infinite;
-}
-figure:nth-child(7) {
-	-webkit-animation: xfade 48s 6s infinite;
-}
-figure:nth-child(8) {
-	-webkit-animation: xfade 48s 0s infinite;
-}
 
 
 /* Body
@@ -1733,6 +1615,7 @@ hr {
 	padding-left: 30px;
 }
 
+
 /* Team Section
 /* -------------------------------------------------------------------- */
 #about {
@@ -1740,7 +1623,7 @@ hr {
 
 	margin-top: 66px;
 	padding-top: 78px;
-	padding-bottom: 120px;
+	padding-bottom: 160px;
 }
 #team{
 	background: #a43b0a url(../images/brown.jpg) no-repeat bottom center fixed;
@@ -2285,5 +2168,7 @@ td{
 }
 
 option,optgroup {
+	position: fixed;
+
 	color: black;
 }

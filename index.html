@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/media-queries.css">         
   <link href="css/flipTimer.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet" />
   <!-- Script
   =================================================== -->
   <script src="js/modernizr.js"></script>
@@ -86,41 +87,28 @@
  <section id="home">  
 
   <div style="background-image: url(images/bg-hero.jpg); padding-bottom:400px"  >
-   <div id="newswrapper">
-    <div class="first">
-      <dl id="ticker-1">
-        <dt>SPORTS</dt>
-        <dd>all the sports related latest news goes here</dd>
 
-        <dt>CULTURAL</dt>
-        <dd>all the cultural related latest news goes here</dd>
+    <br>
+    <br>
+    <br>
+    <img style="padding-left:200px" align="middle" src="images/1.png" alt="logo">
 
-        <dt>TECHNICAL</dt>
-        <dd>all the technical related latest news goes here</dd>
 
-        <dt>OTHER</dt>
-        <dd>all the extral  latest news goes here</dd>
-      </dl>
+    <br>    
+    <br> 
+    <br>
+    <br>
+    <div  align="left" class="flipTimer">
+      <div class="days"></div>
+      <div class="hours"></div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
+
     </div>
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div>
-    <img style="padding-left:250px" align="middle" src="images/1.png" alt="logo">
-  </div> 
-  <br>     
-  <div align="middle" class="flipTimer">
-    <div class="days"></div>
-    <div class="hours"></div>
-    <div class="minutes"></div>
-    <div class="seconds"></div>
-  </div>
-  <strong><p  align="middle"><font color="#F26522" size="5px">Awesomeness on the way.</font></p></strong>
 
-</div> 
+    <strong><p style="padding-left:100px"><font color="#DF3A01" size="5px">Awesomeness on the way.</font></p></strong>
+
+  </div> 
 </section>
 
 
@@ -387,18 +375,29 @@
         <h1>Gallery<span></span></h1>
 
         <hr />
-        <div id="gouter">
-          <div id="ginner">
-            <div id="carousel">
-              <img src="img/snow1.jpg" width="400" height="300" />
-              <img src="img/snow2.jpg" width="400" height="200" />
-              <img src="img/snow3.jpg" width="300" height="400" />
-              <img src="img/snow4.jpg" width="300" height="300" />
-              <img src="img/snow5.jpg" width="200" height="400" />
-              <img src="img/snow6.jpg" width="400" height="300" />
-            </div>
-          </div>
+        <div align="middle" style="width:100%;height:auto">
+          <figure style="padding-top:40px;">
+            <a id="slideshowzoom" href="img/snow1.jpg" data-lightbox="image-1">
+              <img id="slideshow" src="img/snow1.jpg" alt="class-header-css3"  class="alignnone size-full wp-image-172" />
+            </a>
+            <a style="display: none;" id="slideshowzoom-hide" href="img/snow2.jpg" data-lightbox="image-1">
+              <img id="slideshow-hide" src="img/snow1.jpg" alt="class-header-css3"  class="alignnone size-full wp-image-172" />
+            </a>
+            <a style="display: none;" id="slideshowzoom-hide" href="img/snow3.jpg" data-lightbox="image-1">
+              <img id="slideshow-hide" src="img/snow1.jpg" alt="class-header-css3"  class="alignnone size-full wp-image-172" />
+            </a>
+            <a style="display: none;" id="slideshowzoom-hide" href="img/snow4.jpg" data-lightbox="image-1">
+              <img id="slideshow-hide" src="img/snow1.jpg" alt="class-header-css3"  class="alignnone size-full wp-image-172" />
+            </a>
+            <a style="display: none;" id="slideshowzoom-hide" href="img/snow5.jpg" data-lightbox="image-1">
+              <img id="slideshow-hide" src="img/snow1.jpg" alt="class-header-css3"  class="alignnone size-full wp-image-172" />
+            </a>
+            <a style="display: none;"  id="slideshowzoom-hide" href="img/snow6.jpg" data-lightbox="image-1">
+              <img id="slideshow-hide" src="img/snow1.jpg" alt="class-header-css3"  class="alignnone size-full wp-image-172" />
+            </a>
+          </figure>
         </div>
+
       </div>
     </div>
 
@@ -655,15 +654,14 @@ class="copyright">&copy; Copyright @rithm2k15</p>
 
 <footer>
   <div id="go-top">
-    <a class="smoothscroll" title="Back to Top" href="#hero"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+    <a class="smoothscroll" title="Back to Top" href="#home"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
   </div>
 </footer>
 
    <!-- Java Script
    ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-
+   <script src="js/jquery-1.11.0.min.js"></script>
+   <script src="js/lightbox.min.js"></script>
    <script src="js/jquery.flipTimer.js"></script>
    <script src="js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
    <script src="js/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
@@ -675,21 +673,9 @@ class="copyright">&copy; Copyright @rithm2k15</p>
    <script src="js/main.js"></script>
 
    <script type="text/javascript">
-     $(function() {
-      $('#carousel').carouFredSel({
-        width: 700,
-        height: 420,
-        items: 1,
-        scroll: {
-          duration: 750,
-          timeoutDuration: 1250
-        }
 
-      }).children().each(function() {
-        $(this).css('marginTop', ( 420 - $(this).outerHeight() ) / 2 );
-      });
-    });
      $(document).ready(function() {
+      var count = 1;
       $('.flipTimer').flipTimer({
 
 // count up or countdown
@@ -702,32 +688,18 @@ date: 'Mar 18, 2015 12:00:00',
 callback: function() { $('.flipTimer').hide }
 
 });
-    });
-     $(function() {
-      var _scroll = {
-        delay: 1000,
-        easing: 'linear',
-        items: 1,
-        duration: 0.07,
-        timeoutDuration: 0,
-        pauseOnHover: 'immediate'
-      };
-      $('#ticker-1').carouFredSel({
-        width: 1000,
-        align: false,
-        items: {
-          width: 'variable',
-          height: 35,
-          visible: 1
+      setInterval(
+        function(){
+          var offset = (count%7);
+          var attr = "img/snow"+offset+".jpg";
+          count=count+1;
+          $('#slideshow').attr('src',attr);    
+          $('#slideshowzoom').attr('href',attr);
         },
-        scroll: _scroll
-      });
+        3000
+        );
+    });
 
-
-        //  set carousels to be 100% wide
-        $('.caroufredsel_wrapper').css('width', '100%');
-
-      });
 
    </script>
 
