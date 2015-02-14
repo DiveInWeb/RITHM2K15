@@ -1550,7 +1550,7 @@ hr {
 /*  m. Services Section
 /* =================================================================== */
 #services {
-	background:#12151b url( ../images/reg_bg.jpg) no-repeat center center fixed;;
+	background:#12151b url( ../images/reg_bg.jpg) no-repeat center center fixed;
 	padding-top: 120px;
 	padding-bottom: 120px;
 	text-align: center;
@@ -1589,7 +1589,7 @@ hr {
 /* =================================================================== */
 
 #about {
-	background: #12151b;
+	background-image: #12151b;
 	padding-top: 120px;
 	padding-bottom: 110px;
 }
