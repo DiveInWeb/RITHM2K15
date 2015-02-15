@@ -1502,7 +1502,7 @@ hr {
 .item .item-wrap .portfolio-item-meta {
 	position: absolute;
 	top: 10%;
-	left: 10%;
+	left: 0%;
 	filter: alpha(opacity=0);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	opacity: 0;
@@ -1625,13 +1625,13 @@ hr {
 	padding-top: 78px;
 	padding-bottom: 160px;
 }
-#team{
+#teammems{
 	background: #a43b0a url(../images/brown.jpg) no-repeat bottom center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
 	padding-top: 120px;
-	padding-bottom: 350px;
+	padding-bottom: 50px;
 	width: 100%;
 }
 
@@ -1657,8 +1657,8 @@ hr {
 	margin-bottom: 15px;
 }
 #team-wrapper .member-pic {
-	width: 78px;
-	height: 78px;
+	width: 168px;
+	height: 168px;
 	display: inline-block;
 	position: relative;
 	top: 12px;
@@ -2046,7 +2046,7 @@ hr {
 	margin-bottom: 0;
 }
 .more-projects .portfolio-wrapper {
-	text-align: left;
+	text-align: middle;
 }
 
 figure:nth-child(1) {
@@ -2171,4 +2171,19 @@ option,optgroup {
 	position: fixed;
 
 	color: black;
+}
+
+.cocon {
+	display: inline-block;
+}
+.stcom {
+	display: inline-block;
+}
+
+.evcom {
+	display: inline-block;
+}
+
+.team-pic{
+	border-radius:100%;
 }
