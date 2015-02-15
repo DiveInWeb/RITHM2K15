@@ -2187,3 +2187,12 @@ option,optgroup {
 .team-pic{
 	border-radius:100%;
 }
+
+
+.logo-news{
+	display: inline-block;
+}
+
+#lnews{
+	background-color: white
+}

@@ -84,39 +84,37 @@
 
  <!-- Hero
  =================================================== -->
- <section id="home">  
+<div style="background-image: url(images/11.jpg); padding-bottom:100px" >
+ <div style="padding-top:20px" class="logo-news"  >
+  <img  src="images/1.png" alt="logo">
+</div> 
+<div style="padding-left:150px;" class="logo-news"  >
+<h2 style="padding-top:70px;padding-left:60px;color:black;">Latent News</h2>
+<marquee id="lnews" style="color:black;" height = " 300px"width="300px" behavior="scroll" direction="up" scrollamount="2">
+    <u><p>The Winners of Inter College Cricket Tournament is KIET Team and the Runners team is RIT-2.<img alt="Latest News" src="new.png"></p><p></p></u>
+    <u><p>The Last Date for online registrations for all the events is extended upto 10-03-2014.<img alt="Latest News" src="new.png"></p><p></p></u>
+    <u><p>All Technical, Cultural, Sports event registrations are started</p><p></p></u>
+    <u></u><p><u>Last date  for Inter College Cricket Tournament Registration 18th feb 2k14</u></p>
+    <u><p>Inter College Cricket Tournament Starts from 19th feb 2k14</p></u>
+    <br><br>
+  </marquee>
+</div>
+<div style="padding-left:300px;" class="logo-news" align="middle" id="flipTimer">
+  <div class="days"></div>
+  <div class="hours"></div>
+  <div class="minutes"></div>
+  <div class="seconds"></div>
 
-  <div style="background-image: url(images/11.jpg); padding-bottom:400px"  >
+</div>
 
-    <br>
-    <br>
-    <br>
-    <img style="padding-left:220px" align="middle" src="images/1.png" alt="logo">
-
-<div class="fb-like" data-href="https://www.facebook.com/NITCHackerEarthClub" data-width="50" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
-    <br>    
-    <br> 
-    <br>
-    <br>
-    <div  align="middle" class="flipTimer">
-      <div class="days"></div>
-      <div class="hours"></div>
-      <div class="minutes"></div>
-      <div class="seconds"></div>
-
-    </div>
-
-    <strong><p style="padding-left:500px"><font color="black" size="5px">Awesomeness on the way.</font></p></strong>
-
-  </div> 
-</section>
-
+<strong><p style="padding-left:500px"><font color="black" size="5px">Awesomeness on the way.</font></p></strong>
+</div>
 
 
 <footer>
-   
-<p align="middle" 
-class="copyright">&copy; Copyright @rithm2k15</p>        
+
+  <p align="middle" 
+  class="copyright">&copy; Copyright @rithm2k15</p>        
 
 </footer>
 
@@ -138,7 +136,7 @@ class="copyright">&copy; Copyright @rithm2k15</p>
 
      $(document).ready(function() {
       var count = 1;
-      $('.flipTimer').flipTimer({
+      $('#flipTimer').flipTimer({
 
 // count up or countdown
 direction: 'down',
@@ -147,7 +145,7 @@ direction: 'down',
 date: 'Mar 18, 2015 12:00:00',
 
 // callback works only with direction = "down"
-callback: function() { $('.flipTimer').hide }
+callback: function() { $('#flipTimer').hide }
 
 });
       setInterval(
