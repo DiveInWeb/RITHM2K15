@@ -2199,3 +2199,6 @@ option,optgroup {
     border-radius: 18px;
 
 }
+.timer {
+	display: inline-block;
+}
