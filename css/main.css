@@ -2194,5 +2194,8 @@ option,optgroup {
 }
 
 #lnews{
-	background-color: white
+	background-color: white;
+	border: #DF3A01 2px solid;
+    border-radius: 18px;
+
 }
