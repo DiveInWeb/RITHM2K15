@@ -88,7 +88,7 @@
  <div style="padding-top:40px;padding-left:260px;" class="logo"  >
   <img  src="images/1.png" alt="logo">
 </div> 
-<strong  style="padding-left:30px;"  class="logo-news" ><p  style="font-size:17px;color:#DF3A01">
+<strong  style="padding-left:30px;"  class="logo-news" ><p  style="font-size:17px;color:black">
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Days&nbsp;&nbsp;&nbsp;
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes
@@ -100,7 +100,7 @@
   <div  id="timer" class="minutes"></div>
   <div  id="timer" class="seconds"></div>
 </div>
-<strong style="color:#DF3A01;font-size:20px" ><p align="middle">Awesomeness on the way</p></strong>
+<strong style="color:black;font-size:20px" ><p align="middle">Awesomeness on the way</p></strong>
 </strong>
 
 <div style="vertical-align:top;padding-left:90px;" class="logo-news"  >
@@ -122,7 +122,7 @@
 
 
 <footer>
-<strong align="middle"><p style="color:white;">Like RITHM on Facebook to get Updates on the Events</p></strong>
+<strong align="middle"><p style="color:white;">Follow RITHM on Facebook.</p></strong>
 <iframe style="padding-left:480px" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FRITHM2K15&amp;width=300&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:80px;" allowTransparency="true"></iframe>
   <p style="color:white;" align="middle" 
   class="copyright">&copy; Copyright @rithm2k15</p>        
@@ -159,18 +159,10 @@ date: 'Mar 18, 2015 12:00:00',
 callback: function() { $('#flipTimer').hide }
 
 });
-      setInterval(
-        function(){
-          var offset = (count%7);
-          var attr = "img/snow"+offset+".jpg";
-          count=count+1;
-          $('#slideshow').attr('src',attr);    
-          $('#slideshowzoom').attr('href',attr);
-        },
-        3000
-        );
-    });
-
+      $(".nav a").mouseover(function(){
+        document.getElementById("sound").play();
+      });
+});
 
    </script>
 

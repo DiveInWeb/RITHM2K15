@@ -189,32 +189,13 @@
    <script type="text/javascript">
 
      $(document).ready(function() {
-      var count = 1;
-      $('.flipTimer').flipTimer({
+     
+     
 
-// count up or countdown
-direction: 'down',
-
-// the target <a href="http://www.jqueryscript.net/time-clock/">date</a>
-date: 'Mar 18, 2015 12:00:00',
-
-// callback works only with direction = "down"
-callback: function() { $('.flipTimer').hide }
-
-});
-      setInterval(
-        function(){
-          var offset = (count%7);
-          var attr = "img/snow"+offset+".jpg";
-          count=count+1;
-          $('#slideshow').attr('src',attr);    
-          $('#slideshowzoom').attr('href',attr);
-        },
-        3000
-        );
+      $(".nav a").mouseover(function(){
+        document.getElementById("sound").play();
+      });
     });
-
-
    </script>
 
 

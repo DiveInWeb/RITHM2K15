@@ -68,8 +68,8 @@
          <span class="menu-icon"></span>
        </a>         
        <ul id="nav" class="nav">
-         <li onclick="document.getElementById('sound').play()" class="current"><a  href="index.html">|Home|</a></li>
-         <li onclick="document.getElementById('sound').play()" class="current"><a  href="about.html">|About|</a></li>
+         <li onclick="document.getElementById('sound').play()" ><a  href="index.html">|Home|</a></li>
+         <li onclick="document.getElementById('sound').play()" ><a  href="about.html">|About|</a></li>
          <li><a  onclick="document.getElementById('sound').play()"   href="events.html">|Events|</a></li>
          <li><a  onclick="document.getElementById('sound').play()"  href="reg.html">|Registration|</a></li>
          <li><a  onclick="document.getElementById('sound').play()"  href="gg.html">|Gallery|</a></li>
@@ -191,32 +191,11 @@ class="copyright">&copy; Copyright @rithm2k15</p>
    <script type="text/javascript">
 
      $(document).ready(function() {
-      var count = 1;
-      $('.flipTimer').flipTimer({
-
-// count up or countdown
-direction: 'down',
-
-// the target <a href="http://www.jqueryscript.net/time-clock/">date</a>
-date: 'Mar 18, 2015 12:00:00',
-
-// callback works only with direction = "down"
-callback: function() { $('.flipTimer').hide }
-
+  
+      $(".nav a").mouseover(function(){
+        document.getElementById("sound").play();
+      });
 });
-      setInterval(
-        function(){
-          var offset = (count%7);
-          var attr = "img/snow"+offset+".jpg";
-          count=count+1;
-          $('#slideshow').attr('src',attr);    
-          $('#slideshowzoom').attr('href',attr);
-        },
-        3000
-        );
-    });
-
-
    </script>
 
 

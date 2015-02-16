@@ -29,6 +29,9 @@
    <!-- Favicons
    =================================================== -->
    <link rel="shortcut icon" href="favicon.jpg" >
+   <!-- Sounds
+   =================================================== -->
+   <audio id="sound" src="click.mp3"></audio>
 
  </head>
 
@@ -381,6 +384,10 @@ else if (window.attachEvent){
 };
 
 })();
+
+      $(".nav a").mouseover(function(){
+        document.getElementById("sound").play();
+      });
 </script>
  </body>
 
