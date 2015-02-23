@@ -53,11 +53,7 @@
    <!-- Header
    =================================================== -->
    <header id="main-header">
-   	<div class="row header-inner">
-       <div class="logo">
-        <a onclick="document.getElementById('sound').play()"  href="index.html">|RITHM2K15|</a>
-      </div>
-      <nav id="nav-wrap">         
+      <nav align="middle" id="nav-wrap">         
         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
          <span class='menu-text'>Show Menu</span>
          <span class="menu-icon"></span>
@@ -67,10 +63,10 @@
          <span class="menu-icon"></span>
        </a>         
        <ul id="nav" class="nav">
-         <li onclick="document.getElementById('sound').play()" ><a  href="index.html">|Home|</a></li>
+         <li onclick="document.getElementById('sound').play()" class="current"><a  href="index.html">|Home|</a></li>
          <li onclick="document.getElementById('sound').play()" ><a  href="about.html">|About|</a></li>
          <li><a  onclick="document.getElementById('sound').play()"   href="events.html">|Events|</a></li>
-         <li style="background-color: #f26522;" ><a  onclick="document.getElementById('sound').play()"  href="reg.html">|Registration|</a></li>
+         <li style="background-color: #f26522;"><a  onclick="document.getElementById('sound').play()"  href="reg.html">|Registration|</a></li>
          <li><a  onclick="document.getElementById('sound').play()"  href="gg.html">|Gallery|</a></li>
          <li><a  onclick="document.getElementById('sound').play()"  href="team.html">|Our Team|</a></li>
          <li><a  onclick="document.getElementById('sound').play()" href="contact.html">|Contact|</a></li>
@@ -82,7 +78,6 @@
 
 
 
-
   
 
 
@@ -90,7 +85,7 @@
    <!-- Services Section
    ================================================== -->
    <section id="services">
-
+<img align="middle" style="height:200px; width:400px"  src="images/1.png" alt="logo">
    	<div  style = "padding-bottom:100%;"class="row section-head">
 
    		<div class="twelve columns">
@@ -117,7 +112,7 @@
               <td id="th"  ><td><td style="color:#f26522;">Email:</td><td><input type="text" name="regEmail" id="regEmail" size="50"></td></td></td>
             </tr>
             <tr>
-              <td id="th" ><td><td style="color:#f26522;">Mobile:</td><td><input type="text" name="regMobile" id="regMobile" size="50"></td></td></td>
+              <td id="th" ><td><td style="color:#f26522;">Phone No: </td><td><input type="text" name="regMobile" id="regMobile" size="50"></td></td></td>
             </tr>
             <tr>
               <td id="th"  ><td><td style="color:#f26522;">Event:</td>
@@ -147,12 +142,14 @@
                    <option value="Technical Jam">Technical Jam</option>
                    <option value="Project Expo">Project Expo</option>
                    <option value="Quiz">Quiz</option>
+                   <option value="LAN Games">LAN Games</option>
+                   <option value="Googler">Googler</option>
                  </optgroup>
 
                </select>
              </td>
            </tr>
-           <tr><td id="th"><td><td style="color:#f26522;">Message: </td><td><textarea name="regMessage" id="regMessage"  style="width: 350px;" ></textarea></td></td></td></tr>
+           <tr><td id="th"><td><td style="color:#f26522;">Address: </td><td><textarea name="regMessage" id="regMessage"  style="width: 350px;" ></textarea></td></td></td></tr>
          </tbody>
          </table>
          <div align="middle" style="padding-right:12%">

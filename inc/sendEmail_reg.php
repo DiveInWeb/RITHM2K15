@@ -1,7 +1,8 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'mrmrg.93@gmail.com';
+$siteOwnersEmail_1 = 'mrmrg.93@gmail.com';
+$siteOwnersEmail_2 = 'rakeshnitcalicut@gmail.com';
 
 
 if($_POST) {
@@ -55,11 +56,25 @@ if($_POST) {
 
 	if (!$error) {
 
-      ini_set("sendmail_from", $siteOwnersEmail); // for windows server
-      $mail = mail($siteOwnersEmail, $subject, $message, $headers);
+      ini_set("sendmail_from", $siteOwnersEmail_1); // for windows server
+      $mail = mail($siteOwnersEmail_1, $subject, $message, $headers);
 
       if ($mail) { echo "OK"; }
       else { echo "Something went wrong. Please try again."; }
+
+       ini_set("sendmail_from", $siteOwnersEmail_2); // for windows server
+       $mail = mail($siteOwnersEmail_2, $subject, $message, $headers);
+
+       if ($mail) { echo "OK"; }
+       else { echo "Something went wrong. Please try again."; }
+
+
+       ini_set("sendmail_from", "rakeshnitcalicut@gmail.com"); // for windows server
+       $mail = mail("rakeshnitcalicut@gmail.com", $subject, $message, $headers);
+
+       if ($mail) { echo "OK"; }
+       else { echo "Something went wrong. Please try again."; }
+
 
 	} # end if - no validation error
 
