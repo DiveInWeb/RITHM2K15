@@ -26,10 +26,6 @@ if($_POST) {
 	if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
 		$error['email'] = "Please enter a valid email address.";
 	}
-	// Check Mobile Number
-	if (strlen($mobile) < 10) {
-		$error['mobile'] = "Please enter a valid mobile number.";
-	}
 
 	//Check Event Submission
 	if ($event == "null") {
@@ -38,10 +34,10 @@ if($_POST) {
    // Set Message
 	$message .= "Email from: " . $name . "<br />";
 	$message .= "Email address: " . $email . "<br />";
-	$message .= "Mobile Number : " . $mobile . "<br/>";
+	$message .= "Mobile Number [ Optional ] : " . $mobile . "<br/>";
 	$message .= "College Name : " . $college . "<br/>";
 	$message .= "Event : " . $event . "<br/>";
-	$message .= "Message [ Optional ] : " . $contact_message . "<br/>";
+	$message .= "Address [ Optional ] : " . $contact_message . "<br/>";
 	$message .= "<br /> ----- <br /> This email was sent from your site's Registration form. <br />";
 
    // Set From: header
@@ -65,15 +61,9 @@ if($_POST) {
        ini_set("sendmail_from", $siteOwnersEmail_2); // for windows server
        $mail = mail($siteOwnersEmail_2, $subject, $message, $headers);
 
-       if ($mail) { echo "OK"; }
-       else { echo "Something went wrong. Please try again."; }
-
 
        ini_set("sendmail_from", "rakeshnitcalicut@gmail.com"); // for windows server
        $mail = mail("rakeshnitcalicut@gmail.com", $subject, $message, $headers);
-
-       if ($mail) { echo "OK"; }
-       else { echo "Something went wrong. Please try again."; }
 
 
 	} # end if - no validation error
