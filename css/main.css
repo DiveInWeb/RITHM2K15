@@ -270,6 +270,7 @@ select {
 	max-width: 100%;
 	background: transparent;
 	border: 3px solid black;
+	background-color: white;
 }
 textarea {
 	min-height: 162px;
@@ -2166,8 +2167,13 @@ td{
 	padding-left: 20%;
 }
 
-option,optgroup {
+option {
 	position: fixed;
+
+	color: black;
+}
+optgroup{
+		position: fixed;
 
 	color: black;
 }
