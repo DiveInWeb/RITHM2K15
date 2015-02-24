@@ -119,7 +119,7 @@
 
 
           <ul>
-           <li>Participants should mail their Papers to <strong>rithm2k15@gmail.com</strong></li>
+           <li>Participants should mail their Papers to <strong>rithm2k15@regencyengg.com</strong></li>
            <li>Papers must be of <strong>IEEE Format Only</strong></li>
            <li>Last date of Submission is <strong>10th March , 2015</strong></li>
            <li  style="cursor: pointer;color:black" id="topics_pp"><u><strong>Click here for topics</strong></u>
@@ -156,10 +156,10 @@
        <strong><p>Registration Fees:</strong> 250/-</p>
        <strong>Rules</strong>
        <ul>
-         <li>Participants should mail their Posters to <strong>rithm2k15@gmail.com</strong></li>
+         <li>Participants should mail their Posters to <strong>rithm2k15@regencyengg.com</strong></li>
          <li>Last date of Submission is <strong>10th March , 2015</strong></li>
          <li style="cursor: pointer;color:black" id="topics_po"><u><strong>Click here for topics</strong></u>
-             <ul id="list_po">
+             <ul id="list_po" >
               <li><strong>Mechanical Topics</strong></li>
               <ul>
               <li>Topic-1</li>
@@ -209,7 +209,7 @@
     <strong><p>Registration Fees:</strong> 500/-</p>
     <strong>Rules</strong>
     <ul>
-      <li>Participants should mail their Absracts to <strong>rithm2k15@gmail.com</strong></li>
+      <li>Participants should mail their Absracts to <strong>rithm2k15@regencyengg.com</strong></li>
       <li>Last date of Submission is <strong>10th March , 2015</strong></li>
     </ul>
   </div>   
@@ -218,25 +218,31 @@
   <div id="contest_desc">
    <h3  style="padding-right:50%;" >LAN Games</h3>
 
-   <strong><p>Team Size:</strong>4</p>
-   <strong><p>Registration Fees:</strong> 300/-</p>
-   <strong>Rules</strong>
-   <ul>
-     <li>Event consists of<strong> 4 Rounds</strong></li>
-   </ul>
+     <h3  style="padding-right:50%;" >LAN Games</h3>
+
+       <strong><p>Team Size:</strong>1-4</p>
+       <strong><p>Registration Fees:</strong> 150/head</p>
+       <strong>Rules</strong>
+       <ul>
+         <li>Event consists of<strong> single Round</strong></li>
+       </ul>
+       <li>Last date of registration is <strong>10th March , 2015</strong></li>
+       </ul>
  </div>
  <hr/>
  <img   style="padding-top:50px;" id="eventimg" src="images/portfolio/gg.jpg" align="left" height="400" width="300">
  <div id="contest_desc">
-   <h3  style="padding-right:50%;" >Googler</h3>
+  <h3  style="padding-right:50%;" >Googler</h3>
 
 
-   <strong><p>Team Size:</strong> 2</p>
-   <strong><p>Registration Fees:</strong> 250/-</p>
-   <strong>Rules</strong>
-   <ul>
-     <li>Last date of registration is <strong>10th March , 2015</strong></li>
-   </ul>
+       <strong><p>Team Size:</strong> 1-2</p>
+       <strong><p>Registration Fees:</strong> 150/head</p>
+       <strong>Rules</strong>
+       <ul>
+          <li>Event consists of<strong> single Round</strong></li>
+       </ul>
+         <li>Last date of registration is <strong>10th March , 2015</strong></li>
+       </ul>
  </div>
  <hr/>
  <img   id="eventimg" src="images/portfolio/quiz.jpg" align="left" height="400" width="300">
@@ -426,18 +432,30 @@ $(".nav a").mouseover(function(){
 
 $(
   function(){
-
+    list_po=true;
+    list_pp = true;
     $("#list_po").hide();
     $("#list_pp").hide();
-
     $("#topics_po").click(
       function(){
-       $("#list_po").show();
+       if(list_po == true){ 
+              $("#list_po").show();
+              list_po= false;}
+             else{
+                  $("#list_po").hide();
+                  list_po=true;
+             } 
      });
 
     $("#topics_pp").click(
       function(){
-       $("#list_pp").show();
+            if(list_pp == true){ 
+              $("#list_pp").show();
+              list_pp= false;}
+             else{
+                  $("#list_pp").hide();
+                  list_pp=true;
+             } 
      });
   });
 </script>
