@@ -2213,5 +2213,14 @@ optgroup{
 }
 
 .homepage{
-	min-width: 1300px;
+	min-width: 1270px;
 }
+
+  #outerCircleText {
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'cambria';
+      color: #f26522;
+      position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+      #outerCircleText div {position: relative;}
+      #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
