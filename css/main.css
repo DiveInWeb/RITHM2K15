@@ -2211,3 +2211,7 @@ optgroup{
 .wb {
 	display: inline-block;
 }
+
+.homepage{
+	min-width: 1300px;
+}
