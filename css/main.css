@@ -1150,8 +1150,11 @@ hr {
 	color: white;
 	margin-bottom: 18px;
 }
-.section-head h1 span {
+ h1 span {
 	color: #f26522;
+}
+.section-head {
+	color: #a43b0a;
 }
 .section-head p {
 	font: 18px/36px "merriweather-light", sans-serif;
@@ -1164,7 +1167,7 @@ hr {
 /* page title
 ---------------------------------------------------------------------- */
 #page-title {
-	background: #12151b url( ../images/brown.jpg) no-repeat center center fixed;
+	background:  #a43b0a url( ../images/brown.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
@@ -1627,7 +1630,7 @@ hr {
 	padding-bottom: 160px;
 }
 #teammems{
-	background: #a43b0a url(../images/brown.jpg) no-repeat bottom center fixed;
+	background: #D27B33  no-repeat bottom center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
