@@ -32,7 +32,7 @@ if($_POST) {
 		$error['event'] = "Please select an event";
 	}
 
-	if ($event != "null" && $regEventTopic] == "null") {
+	if ($event != "null" && $regEventTopic == "null") {
 		$error['eventTopic'] = "Please select a topic for Poster Preparation or Paper Presentation";
 	}
    // Set Message
