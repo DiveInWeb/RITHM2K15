@@ -10,8 +10,8 @@ if($_POST) {
 	$name = trim(stripslashes($_POST['regName']));
 	$college = trim(stripslashes($_POST['regCollege']));
 	$email = trim(stripslashes($_POST['regEmail']));
+	$branch = trim(stripslashes($_POST['regBranch']));
 	$mobile = trim(stripslashes($_POST['regMobile']));
-	$contact_message = trim(stripslashes($_POST['regMessage']));
 	$event = trim(stripslashes($_POST['regEvent']));
 	$regEventTopic = trim(stripslashes($_POST['regEventTopic']));
    // Check First Name
@@ -39,9 +39,10 @@ if($_POST) {
 	$message .= "Email from: " . $name . "<br />";
 	$message .= "Email address: " . $email . "<br />";
 	$message .= "Mobile Number [ Optional ] : " . $mobile . "<br/>";
+	$message .= "Branch [ Optional ] : " . $branch . "<br/>";
 	$message .= "College Name : " . $college . "<br/>";
 	$message .= "Event : " . $event . "<br/>";
-	$message .= "Address [ Optional ] : " . $contact_message . "<br/>";
+	$message .= "Event Topic [for PP-P and PO-P Only]: " . $regEventTopic . "<br/>";
 	$message .= "<br /> ----- <br /> This email was sent from your site's Registration form. <br />";
 
    // Set From: header
