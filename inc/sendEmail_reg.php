@@ -13,7 +13,7 @@ if($_POST) {
 	$mobile = trim(stripslashes($_POST['regMobile']));
 	$contact_message = trim(stripslashes($_POST['regMessage']));
 	$event = trim(stripslashes($_POST['regEvent']));
-
+	$regEventTopic = trim(stripslashes($_POST['regEventTopic']));
    // Check First Name
 	if (strlen($name) < 2) {
 		$error['name'] = "Please enter your first name.";
@@ -30,6 +30,10 @@ if($_POST) {
 	//Check Event Submission
 	if ($event == "null") {
 		$error['event'] = "Please select an event";
+	}
+
+	if ($event != "null" && $regEventTopic] == "null") {
+		$error['eventTopic'] = "Please select a topic for Poster Preparation or Paper Presentation";
 	}
    // Set Message
 	$message .= "Email from: " . $name . "<br />";
@@ -75,6 +79,7 @@ if($_POST) {
 		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
 		$response .= (isset($error['mobile'])) ? $error['mobile'] . "<br />" : null;
 		$response .= (isset($error['event'])) ? $error['event'] . "<br />" : null;
+		$response .= (isset($error['eventTopic'])) ? $error['eventTopic'] . "<br />" : null;
 
 		
 		echo $response;

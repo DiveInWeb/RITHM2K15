@@ -19,10 +19,13 @@
    ================================================== -->
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS
+  <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media-queries.css">         
+  <link href="css/flipTimer.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet" />
   <!-- Script
   =================================================== -->
   <script src="js/modernizr.js"></script>
@@ -82,9 +85,9 @@
    <!-- Services Section
    ================================================== -->
    <section id="services">
-   	<div  style = "padding-bottom:100%;"class="row section-head">
+    <div  style = "padding-bottom:100%;"class="row section-head">
 
-   		<div class="twelve columns">
+      <div class="twelve columns">
         <img align="middle" style="height:200px; width:400px"  src="images/1.png" alt="logo">
 
         <p style="
@@ -107,17 +110,14 @@
                 <td id="th" ><td><td style="color:#f26522;">College:</td><td><input type="text" name="regCollege" id="regCollege" style="width:350px;"></td></td></td>
               </tr>
               <tr>
-                <td id="th"  ><td><td style="color:#f26522;">Email:</td><td><input type="text" name="regEmail" id="regEmail" style="width:350px;"></td></td></td>
-              </tr>
-              <tr>
-                <td id="th" ><td><td style="color:#f26522;">Phone No: </td><td><input type="text" name="regMobile" id="regMobile" style="width:350px;"></td></td></td>
+                <td id="th" ><td><td style="color:#f26522;">Branch:</td><td><input type="text" name="regBranch" id="regBranch" style="width:350px;"></td></td></td>
               </tr>
               <tr>
                 <td id="th"  ><td><td style="color:#f26522;">Event:</td>
                 <td>
                   <select style="width:350px;"id="regEvent" name="regEvent">
                     <option   value="null">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -&gt; Select Event &lt;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
-                    <optgroup label="SPORTS">
+                    <optgroup label="SPORTS EVENTS">
                      <option value="Volleyball">Volleyball</option>
                      <option value="Badminton">Badminton</option>
                      <option value="Basketball">Basketball</option>
@@ -125,44 +125,93 @@
                      <option value="Chess">Chess</option>
                      <option value="Carroms">Carroms</option>
                      <option value="Throwball">Throwball</option>
-                   </optgroup>
-                   <optgroup label="CULTURAL">
+                     </optgroup>
+                     <optgroup label="CULTURAL EVENTS">
                      <option value="Dance">Dance</option>
                      <option value="Singing">Singing</option>
                      <option value="Movie Making">Movie Making</option>
                      <option value="Skit">Skit</option>
                      <option value="Mime">Mime</option>
                      <option value="Mimicry">Mimicry</option>
-                   </optgroup>
-                   <optgroup label="TECHNICAL">
-                     <option value="Paper presentation">Paper presentations</option>
+                     </optgroup>
+                     <optgroup label="TECHNICAL EVENTS">
+                     <option value="Paper Presentation">Paper Presentation</option>
                      <option value="Poster Presentation">Poster Presentation</option>
                      <option value="Technical Jam">Technical Jam</option>
                      <option value="Project Expo">Project Expo</option>
                      <option value="Quiz">Quiz</option>
                      <option value="LAN Games">LAN Games</option>
                      <option value="Googler">Googler</option>
-                   </optgroup>
-
+                     </optgroup>
                  </select>
                </td>
              </td>
            </td>
          </tr>
-         <tr><td id="th"><td><td style="color:#f26522;">Address: </td><td><textarea name="regMessage" id="regMessage" style="width:350px;"></textarea></td></td></td></tr>
-       </tbody>
-     </table>
-     <div align="middle" style="padding-right:12%">
-       <button class="submit"  >Register</button>
-       <div id="image-loader">
-        <img src="images/loader.gif" alt="" />
-      </div>
-    </div>     
-  </form>
-  <div  id="reg-message-warning"></div>
-  <div id="reg-message-success">
-   <i class="fa fa-check"></i>Your registration is successful. Be there at RITHM2K15.<br />
- </div>
+         <tr class="regTopic">
+           <td id="th"  ><td><td style="color:#f26522;">Topic:</td>
+           <td>
+             <select style="width:350px;"id="regEventTopic" name="regEventTopic">
+               <option   value="null">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -&gt; Select Topic &lt;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+              <optgroup label="Mechanical">
+               <option value="Computational Fluid Dynamics">Computational Fluid Dynamics</option>
+               <option value="Nano Technology/ Mechatronics">Nano Technology/ Mechatronics</option>
+               <option value="Recent trends in Manufacturing/ Micro Machining">Recent trends in Manufacturing/ Micro Machining</option>
+               <option value="Optimization Techniques">Optimization Techniques</option>
+               <option value="New Trends in Mechanical Engineering">New Trends in Mechanical Engineering</option>
+             </optgroup>
+             <optgroup label="ECE">
+               <option value="Embedded & Vlsi system Design">Embedded & Vlsi system Design</option>
+               <option value="Signal & Image Processing">Signal & Image Processing</option>
+               <option value="Advanced Digital Communication">Advanced Digital Communication</option>
+               <option value="Latest Trends in Optical & wireless Communication">Latest Trends in Optical & wireless Communication</option>
+               <option value="Antennas & RF Microwave Communication">Antennas & RF Microwave Communication</option>
+               <option value="MEMS & NANO Systems">MEMS & NANO Systems</option>
+               <option value="Medical Electronics & Biomedical Signal Processing">Medical Electronics & Biomedical Signal Processing</option>
+               <option value="Wireless Sensor Networks">Wireless Sensor Networks</option>
+             </optgroup>
+             <optgroup label="EEE">
+               <option value="Renewable energy resources">Renewable energy resources</option>
+               <option value="Advanced power system & FACTS">Advanced power system & FACTS</option>
+               <option value="Smart Grid">Smart Grid</option>
+               <option value="Advanced Electricity Machines">Advanced Electricity Machines</option>
+               <option value="Application oriented power electric system">Application oriented power electric system</option>
+
+             </optgroup>
+             <optgroup label="CSE">
+               <option value="Data Mining">Data Mining</option>
+               <option value="Cloud Computing">Cloud Computing</option>
+               <option value="Image Processing">Image Processing</option>
+               <option value="Android">Android</option>
+               <option value="Network Security">Network Security</option>
+               <option value="Mobile Adhoc Networks">Mobile Adhoc Networks</option>
+               <option value="Mobile Computing">Mobile Computing</option>
+             </optgroup>
+           </select>
+         </td>
+       </td>
+     </td>
+     <tr>
+      <td id="th"  ><td><td style="color:#f26522;">Email:</td><td><input type="text" name="regEmail" id="regEmail" style="width:350px;"></td></td></td>
+    </tr>
+    <tr>
+      <td id="th" ><td><td style="color:#f26522;">Phone No: </td><td><input type="text" name="regMobile" id="regMobile" style="width:350px;"></td></td></td>
+    </tr>
+    <tr>
+
+    </tbody>
+  </table>
+  <div align="middle" style="padding-right:12%">
+   <button class="submit"  >Register</button>
+   <div id="image-loader">
+    <img src="images/loader.gif" alt="" />
+  </div>
+</div>     
+</form>
+<div  id="reg-message-warning"></div>
+<div id="reg-message-success">
+ <i class="fa fa-check"></i>Your registration is successful. Be there at RITHM2K15.<br />
+</div>
 </div> <!-- /service-list -->
 </div> <!-- /twelve -->
 
@@ -173,23 +222,44 @@
    <!-- Java Script
    ================================================== -->
    <script src="js/jquery-1.11.0.min.js"></script>
+   <script src="js/lightbox.min.js"></script>
+   <script src="js/jquery.flipTimer.js"></script>
+   <script src="js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+   <script src="js/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>   
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/backstretch.js"></script> 
+   <script src="js/waypoints.js"></script>  
    <script src="js/main.js"></script>
 
    <script type="text/javascript">
 
      $(document).ready(function() {
-
-
+      $(".regTopic").hide();
+var option = $("#regEvent").val();
+      
       $(".nav a").mouseover(function(){
         document.getElementById("sound").play();
-      });});
+      });
+$("select").change(  function(){
 
-   </script>
-
+      var option = $("#regEvent").val();
+      if(option == "Paper Presentation" || option == "Poster Presentation" ){
+        $(".regTopic").show();
+      }
+      else{
+ $(".regTopic").hide();
+      }
+    });
+    });
 
    
-   
- </body>
 
- </html>
+  </script>
+
+
+
+</body>
+
+</html>
