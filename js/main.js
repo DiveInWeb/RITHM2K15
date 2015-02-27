@@ -91,10 +91,12 @@
       var regEmail = $('#registerForm #regEmail').val();
       var regMobile = $('#registerForm #regMobile').val();
       var regEvent = $('#registerForm #regEvent').val();
-      var regMessage = $('#registerForm #regMessage').val();
+      var regBranch = $('#registerForm #regBranch').val();
+      var regEventTopic = $('#registerForm #regEventTopic').val();
       var data = 'regName=' + regName  + '&regCollege=' + regCollege + 
                  '&regEmail=' + regEmail + '&regMobile=' + regMobile + 
-                 '&regEvent=' + regEvent + '&regMessage=' + regMessage;
+                 '&regEvent=' + regEvent + '&regBranch=' + regBranch +
+                 '&regEventTopic=' + regEventTopic;
       $.ajax({
 
         type: "POST",

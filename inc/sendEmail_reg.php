@@ -6,7 +6,6 @@ $siteOwnersEmail_2 = 'rithm2k15@regencyengg.com';
 
 
 if($_POST) {
-
 	$name = trim(stripslashes($_POST['regName']));
 	$college = trim(stripslashes($_POST['regCollege']));
 	$email = trim(stripslashes($_POST['regEmail']));
@@ -20,7 +19,7 @@ if($_POST) {
 	}
 	// Check Last Name
 	if (strlen($college) < 2) {
-		$error['college'] = "Please enter your last name.";
+		$error['college'] = "Please enter your college name.";
 	}
 	// Check Email
 	if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
@@ -32,7 +31,7 @@ if($_POST) {
 		$error['event'] = "Please select an event";
 	}
 
-	if ($event != "null" && $regEventTopic == "null") {
+	if (($event == "Paper Presentation" || $event == "Poster Presentation") && $regEventTopic == "null") {
 		$error['eventTopic'] = "Please select a topic for Poster Preparation or Paper Presentation";
 	}
    // Set Message

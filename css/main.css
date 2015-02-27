@@ -1287,7 +1287,7 @@ hr {
 /* k. Hero Section
 /* =================================================================== */
 #hero {
-	background: #8C1A19 no-repeat center center fixed;
+	background: #2A030D no-repeat center center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
@@ -1453,7 +1453,7 @@ hr {
 /* l. Portfolio Section
 /* =================================================================== */
 #portfolio {
-	background: #4F1719  no-repeat center center fixed;
+	background: #213A25  no-repeat center center fixed;
 	padding-top: 120px;
 	padding-bottom: 180px;
 }
