@@ -31,7 +31,7 @@ if($_POST) {
 		$error['event'] = "Please select an event";
 	}
 
-	if (($event == "Paper Presentation" || $event == "Poster Presentation") && $regEventTopic == "null") {
+	if (($event == "Paper Presentation") && $regEventTopic == "null") {
 		$error['eventTopic'] = "Please select a topic for Poster Preparation or Paper Presentation";
 	}
    // Set Message
