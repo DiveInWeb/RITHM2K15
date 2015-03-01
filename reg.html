@@ -121,16 +121,16 @@
                      <option value="Chess">Chess</option>
                      <option value="Carroms">Carroms</option>
                      <option value="Throwball">Throwball</option>
-                     </optgroup>
-                     <optgroup label="CULTURAL EVENTS">
+                   </optgroup>
+                   <optgroup label="CULTURAL EVENTS">
                      <option value="Dance">Dance</option>
                      <option value="Singing">Singing</option>
                      <option value="Movie Making">Movie Making</option>
                      <option value="Skit">Skit</option>
                      <option value="Mime">Mime</option>
                      <option value="Mimicry">Mimicry</option>
-                     </optgroup>
-                     <optgroup label="TECHNICAL EVENTS">
+                   </optgroup>
+                   <optgroup label="TECHNICAL EVENTS">
                      <option value="Paper Presentation">Paper Presentation</option>
                      <option value="Poster Presentation">Poster Presentation</option>
                      <option value="Technical Jam">Technical Jam</option>
@@ -138,18 +138,23 @@
                      <option value="Quiz">Quiz</option>
                      <option value="LAN Games">LAN Games</option>
                      <option value="Googler">Googler</option>
-                     </optgroup>
+                   </optgroup>
                  </select>
                </td>
              </td>
            </td>
          </tr>
-         <tr class="regTopic">
-           <td id="th"  ><td><td style="color:#f26522;">Topic:</td>
-           <td>
-             <select style="width:350px;"id="regEventTopic" name="regEventTopic">
-               <option   value="null">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -&gt; Select Topic &lt;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
-              <optgroup label="Mechanical">
+
+         <tr class="poster">
+          <td id="th" ><td><td style="color:#f26522;">Topic:</td><td><input type="text" name="regEventTopic" id="regEventTopic" style="width:350px;"></td></td></td>
+        </tr>
+
+        <tr class="regTopic">
+         <td id="th"  ><td><td style="color:#f26522;">Topic:</td>
+         <td>
+           <select style="width:350px;"id="regEventTopic" name="regEventTopic">
+             <option   value="null">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -&gt; Select Topic &lt;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+             <optgroup label="Mechanical">
                <option value="Computational Fluid Dynamics">Computational Fluid Dynamics</option>
                <option value="Nano Technology/ Mechatronics">Nano Technology/ Mechatronics</option>
                <option value="Recent trends in Manufacturing/ Micro Machining">Recent trends in Manufacturing/ Micro Machining</option>
@@ -225,29 +230,37 @@
 
      $(document).ready(function() {
       $(".regTopic").hide();
-var option = $("#regEvent").val();
+      $(".poster").hide();
+      var option = $("#regEvent").val();
       
       $(".nav a").mouseover(function(){
         document.getElementById("sound").play();
       });
-$("select").change(  function(){
+      $("select").change(  function(){
 
-      var option = $("#regEvent").val();
-      if(option == "Paper Presentation" ){
-        $(".regTopic").show();
+        var option = $("#regEvent").val();
+        if(option == "Paper Presentation" ){
+          $(".regTopic").show();
+        }
+        else{
+         $(".regTopic").hide();
+       }
+       if(option == "Poster Presentation" ){
+        $(".poster").show();
       }
       else{
- $(".regTopic").hide();
-      }
+       $(".poster").hide();
+     }
+
+   });
     });
-    });
-
-   
-
-  </script>
 
 
 
-</body>
+   </script>
 
-</html>
+
+
+ </body>
+
+ </html>
