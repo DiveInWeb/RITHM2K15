@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content=""> 
+		<title>Registration-RITHM2k14</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/style5.css" />
+		<script src="js/modernizr.custom.js"></script>
+		
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+	
+	<script type="text/javascript">
+// From: http://www.webdeveloper.com/forum/newreply.php?do=postreply&t=163152
+
+function choice(t){
+	var a = ['Paper Presentation','Poster Presentation','Quiz','Project Expo','Creative Writing','Technical Jam'];
+	var b = ['Singing(Solo)','Singing(Group)','Dancing(Solo)','Dancing(Group)','Mimicry','Skit','Movie Making','MIME'];
+	var c = ['Volley Ball','Basket Ball','Table Tennis(single)','Table Tennis(doubles)','Badminton(single)','Badminton(doubles)','Carroms(single)','Chess','Throw Ball(Girls)'];
+	s = document.getElementById('event2');
+	var sl = s.options.length;
+	for(var i = sl-1; i >= 0 ; i--) { s.options[i] = null; }
+	if(t.value != 0){
+		var z;
+		switch (t.value) {
+			case '1' : z = a; break;
+			case '2' : z = b; break;
+			case '3' : z = c; break;
+			default : alert('Invalid entry'); break;
+		}
+		var l = z.length;
+		for(i = 0; i < l; i++ ) { s.options[i] = new Option(z[i],z[i],false,false); }
+	}
+}
+
+</script>
+
+<script type="text/javascript">
+<!--
+// Form validation code will come here.
+function validate()
+{
+ 
+   if( document.myForm.name.value == "" )
+   {
+     alert( "Please provide your name!" );
+     document.myForm.name.focus() ;
+     return false;
+   }
+   if( document.myForm.college.value == "" )
+   {
+     alert( "Please provide your college name!" );
+     document.myForm.college.focus() ;
+     return false;
+   }
+  if( document.myForm.phone.value == "" ||
+           isNaN( document.myForm.phone.value ) ||
+           document.myForm.phone.value.length != 10 )
+   {
+     alert( "Please provide a phone(without 91) in the format ex:9848121314." );
+     document.myForm.phone.focus() ;
+     return false;
+   }
+   if( document.myForm.email.value == "" )
+   {
+     alert( "Please provide your Email!" );
+     document.myForm.email.focus() ;
+     return false;
+   }
+
+   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+   if(!email.value.match(mailformat))
+   { 
+    alert("You have entered an invalid email address!");
+    mail.focus();
+    return false;
+   }  
+
+   if( document.myForm.address.value == "" )
+   {
+     alert( "Please provide your address!" );
+     document.myForm.address.focus() ;
+     return false;
+   }
+   if(document.getElementById('gender_male').checked==false && document.getElementById('gender_female').checked==false) 
+   {
+     alert( "Please select gender!" );
+     return false; 
+   }
+
+   if( document.myForm.event2.value == "" )
+   {
+     alert( "Please Select your Event!" );
+     return false;
+   }
+return true;
+}
+//-->
+</script>
+	</head>
+	<body>     <img src="images/1.png" width="" height="" border="0" alt="" style="position:absolute;left:300px;top:20px;down:2px;">
+		<img src="images/click.png" width="120" height="90" border="0" alt="" style="position:absolute;left:35px;top:20px;down:2px;">
+		<div class="container">
+			<header class="codrops-header">
+				<nav class="">
+					<a class="current-demo" href="home.html"></a>
+					
+				</nav><br><br><br><br>
+							</header>
+			<nav id="bt-menu" class="bt-menu">
+				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+				<ul>
+					<li><a href="../Home/home.html">Home</a></li>
+					<li><a href="../Event/event.html">Events</a></li>
+					<li><a href="#">Registration</a></li>
+					<li><a href="../Gallery/gallery.html">Gallery</a></li>
+					<li><a href="../Contact/contact.html">Contact</a></li>
+				</ul>
+				<ul>					
+					<li><a href="https://plus.google.com/u/1/116411100696733305337/about" class="bt-icon icon-gplus">Google+</a></li>
+					<li><a href="http://www.facebook.com/rithm2k14" class="bt-icon icon-facebook">Facebook</a></li>
+				</ul>
+			</nav>
+		</div><!-- /container -->
+		<h1 align=center><font color="white"><br><br/>Event Registration Form</font></h1><br>
+<form name=myForm action="register2.php" method=post  onsubmit="return(validate());">
+<table align=center cellspacing="20">
+<tr><td><font color="white">Full Name</font></td><td> <input type=text name=name id=name></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td><font color="white">College Name</font></td><td><input type=text name=college id=college></td></tr></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td><font color="white">Phone Number</font></td><td><input type=text name=phone id=phone></td></tr></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td><font color="white">Email address</font></td><td><input type=text name=email id=email></td></tr></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td><font color="white">Address</font></td><td><textarea name=address id=address cols=40 rows=6></textarea></td></tr></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td><font color="white">Gender</font></td><td><font color="white">Male</font><input type=radio name=gender id=gender_male value=male> 
+<font color="white">Female</font><input type=radio name=gender id=gender_female value=female></td></tr></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td><font color="white">Events</font></td><td><font color="white">Technical</font><input type=radio name=events id=events value=1 onclick="choice(this)">
+<font color="white">Cultural</font><input type=radio name=events id=events value=2 onclick="choice(this)">
+<font color="white">Sports</font><input type=radio name=events id=events value=3 onclick="choice(this)"></td></tr></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td><font color="white">Select Event</font></td><td> <select name=event2 id=event2></select></td></tr></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td></tr></tr>
+<tr><td></td></tr>
+<tr><td></td>
+<tr><td></td><td><input type=submit name=submit value=Submit> <input type=reset></td></tr>
+</table>
+</form>
+<br/><br/><br/>
+	</body>
+	<script src="js/classie.js"></script>
+	<script src="js/borderMenu.js"></script>
+</html>

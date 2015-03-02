@@ -92,15 +92,17 @@
       var regMobile = $('#registerForm #regMobile').val();
       var regEvent = $('#registerForm #regEvent').val();
       var regBranch = $('#registerForm #regBranch').val();
-      var regEventTopic = $('#registerForm #regEventTopic').val();
+      var regEventTopic_pp = $('#registerForm #regEventTopic_pp').val();
+      var regEventTopic_po = $('#registerForm #regEventTopic_po').val();
       var data = 'regName=' + regName  + '&regCollege=' + regCollege + 
                  '&regEmail=' + regEmail + '&regMobile=' + regMobile + 
                  '&regEvent=' + regEvent + '&regBranch=' + regBranch +
-                 '&regEventTopic=' + regEventTopic;
+                 '&regEventTopic_pp=' + regEventTopic_pp +
+                 '&regEventTopic_po=' + regEventTopic_po;
       $.ajax({
 
         type: "POST",
-        url: "inc/sendEmail_reg.php",
+        url: "inc/register.php",
         data: data,
         success: function(msg) {
 
