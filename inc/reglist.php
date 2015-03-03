@@ -39,4 +39,4 @@ echo "</table></center>";
 mysqli_close($con);
 ?> 
 
-<html><body><center><a href="regexport.php">Import Registrion list as Exel file</a></center></body></html>
+<html><body><center><a href="regexport.php">Import Registrion list as Excel file</a></center></body></html>

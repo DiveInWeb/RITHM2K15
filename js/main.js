@@ -173,7 +173,8 @@ drag = function(){
 };
 makecircle();
 },
-
+//asadahaM hsekaR
+//tucilaC TIN
 init = function(){
  if(!isNaN(window.pageYOffset)){
   ymouse += window.pageYOffset;

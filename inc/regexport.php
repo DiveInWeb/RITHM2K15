@@ -1,21 +1,21 @@
 <?php
 $db_name     = "u616683551_rithm";
 $db_password = "rakesh";
-$db_link     = mysqli_connect("localhost", "u616683551_rithm", $db_password,"u616683551_rithm");
-mysql_query("SET NAMES UTF8");
+$db_link     = mysqli_connect("localhost", "u616683551_rithm", "rakesh","u616683551_rithm"); 
+mysqli_query($db_link,"SET NAMES UTF8");
 $table = "reg";
 
 
-function assoc_query_2D($sql, $id_name = false){
+function assoc_query_2D($db_link ,$sql, $id_name = false){
   $result = mysqli_query($db_link,$sql);
   $arr = array();
   $row = array();
   if($result){
     if($id_name == false){
-      while($row = mysql_fetch_assoc($result))
+      while($row = mysqli_fetch_assoc($result))
         $arr[] = $row;
     }else{
-      while($row = mysql_fetch_assoc($result)){
+      while($row = mysqli_fetch_assoc($result)){
         $id = $row['id'];
         $arr[$id] = $row;
       }
@@ -25,13 +25,13 @@ function assoc_query_2D($sql, $id_name = false){
   return $arr;
 }
 
-function query_whole_table($table, $value = '*'){
+function query_whole_table($db_link,$table, $value = '*'){
     $sql = "SELECT $value FROM $table";
-  return assoc_query_2D($sql);
+  return assoc_query_2D($db_link ,$sql);
 }
 
 $export_str = "";
-$result = query_whole_table($table);
+$result = query_whole_table($db_link,$table);
 
 foreach($result as $record){
   $export_str .= implode(";",$record) . "\n";
