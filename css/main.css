@@ -1287,7 +1287,7 @@ hr {
 /* k. Hero Section
 /* =================================================================== */
 #hero {
-	background: #2A030D url(../images/about_bg.jpg) no-repeat center center fixed;
+	background: #12151b url(../images/about_bg.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
@@ -1630,7 +1630,7 @@ hr {
 	padding-bottom: 160px;
 }
 #teammems{
-	background: #7B431D url(../images/brown.jpg) no-repeat bottom center fixed;
+	background: #12151b url(../images/brown.jpg) no-repeat bottom center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
