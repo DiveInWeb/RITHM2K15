@@ -13,6 +13,7 @@ if($_POST) {
 	$mobile = trim(stripslashes($_POST['regMobile']));
 	$event = trim(stripslashes($_POST['regEvent']));
 	$regEventTopic = trim(stripslashes($_POST['regEventTopic']));
+	$otherTopic = trim(stripslashes($_POST['OtherTopic_pp']));
    // Check First Name
 	if (strlen($name) < 2) {
 		$error['name'] = "Please enter your first name.";

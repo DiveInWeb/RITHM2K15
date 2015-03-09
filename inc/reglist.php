@@ -7,6 +7,7 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
 
+
 $result = mysqli_query($con,"SELECT * FROM reg");
 
 echo "<center><table border='1'>

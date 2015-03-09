@@ -83,7 +83,15 @@
 
       <div class="twelve columns">
         <img align="middle" style="height:200px; width:400px"  src="images/1.png" alt="logo">
-
+        <p
+        style="
+        font: 24px/1.3 'raleway-semibold', sans-serif;
+        color: #f26522;
+        letter-spacing: -1px;
+        margin-bottom: 36px;
+        text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+        padding-left:60px;
+        ">Last Date for registration : 15th March</p>
         <p style="
         font: 44px/1.3 'raleway-semibold', sans-serif;
         color: #f26522;
@@ -150,7 +158,7 @@
         </tr>
 
         <tr class="regTopic">
-         <td id="th"  ><td><td style="color:#f26522;">Topic:</td>
+         <td id="th"  ><td><td style="color:#f26522;">Select Topic:</td>
          <td>
            <select style="width:350px;"id="regEventTopic_pp" name="regEventTopic_pp">
              <option   value="null">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -&gt; Select Topic &lt;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
@@ -188,33 +196,49 @@
                <option value="Mobile Adhoc Networks">Mobile Adhoc Networks</option>
                <option value="Mobile Computing">Mobile Computing</option>
              </optgroup>
+             <option>
+               Others
+             </option>
            </select>
          </td>
        </td>
      </td>
      <tr>
+      <tr class="othertopic">
+          <td id="th" ><td><td style="color:#f26522;">Enter Topic:</td><td><input type="text" name="OtherTopic_pp" id="OtherTopic_pp" style="width:350px;" ></td></td></td>
+        </tr>
       <td id="th"  ><td><td style="color:#f26522;">Email:</td><td><input type="text" name="regEmail" id="regEmail" style="width:350px;"></td></td></td>
     </tr>
     <tr>
       <td id="th" ><td><td style="color:#f26522;">Phone No: </td><td><input type="text" name="regMobile" id="regMobile" style="width:350px;"></td></td></td>
     </tr>
-    <tr>
-
-    </tbody>
-  </table>
-  <div align="middle" style="padding-right:12%">
-   <button class="submit"  >Register</button>
-   <div id="image-loader">
-    <img src="images/loader.gif" alt="" />
-  </div>
+    
+  </tbody>
+</table>
+<div align="middle" style="padding-right:12%">
+ <button class="submit"  >Register</button>
+ <div id="image-loader">
+  <img src="images/loader.gif" alt="" />
+</div>
 </div>     
 </form>
 <div  id="reg-message-warning"></div>
 <div id="reg-message-success">
  <i class="fa fa-check"></i>Your registration is successful. Be there at RITHM2K15.<br />
 </div>
+   <p
+   style="
+        font: 24px/1.3 'raleway-semibold', sans-serif;
+        color: black;
+        letter-spacing: -1px;
+        margin-bottom: 36px;
+        text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+        padding-left:60px;
+        "
+        >People who wish to participate in Paper Presentation are expected to mail their abstracts to : rithm2k15@regencyengg.com</p>
 </div> <!-- /service-list -->
 </div> <!-- /twelve -->
+
 
 </section> <!-- /services -->   
 
@@ -232,13 +256,20 @@
       $(".regTopic").hide();
       $(".poster").hide();
       var option = $("#regEvent").val();
-      
+      var otheroption = $("#regEventTopic_pp").val();
       $(".nav a").mouseover(function(){
         document.getElementById("sound").play();
       });
       $("select").change(  function(){
 
         var option = $("#regEvent").val();
+         var otheroption = $("#regEventTopic_pp").val();
+         if(otheroption == "Others"){
+          $(".othertopic").show();
+         }
+         else{
+          $(".othertopic").hide();
+         }
         if(option == "Paper Presentation" ){
           $(".regTopic").show();
         }

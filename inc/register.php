@@ -1,6 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost", "u616683551_rithm", "rakesh","u616683551_rithm"); // localhost , db name, password
-//mysqli_select_db('u616683551_rithm',$conn); //table name
+$conn=mysqli_connect("localhost", "u616683551_rithm", "rakesh","u616683551_rithm"); 
 $myemail ="rakeshnitcalicut@gmail.com";
 
 $name=$_POST['regName'];
@@ -11,7 +10,7 @@ $event=$_POST['regEvent'];
 $topic_pp=$_POST['regEventTopic_pp'];
 $topic_po=$_POST['regEventTopic_po'];
 $branch=$_POST['regBranch'];
-
+$topic_others = $_POST['OtherTopic_pp'];
 
 
 if (strlen($name) < 2) {
@@ -35,19 +34,25 @@ if ($event == "Paper Presentation" && $topic_pp == "null") {
   $error['eventTopic'] = "Please select a topic for Paper Presentation";
 }
 
+if ($event == "Paper Presentation" && $topic_pp == "Others" && $topic_others=="") {
+  $error['eventTopic'] = "Please ebter a topic for Paper Presentation or select one from the list";
+}
+
 if ($event == "Poster Presentation" && $topic_po == "") {
   $error['eventTopic'] = "Please mention a topic for Poster Presentation";
 }
 
+
 if(!$error){
   
-  if($topic_pp!="null") $topic = $topic_pp;
+  if($topic_pp!="null" && $topic_pp == "Others") $topic = $topic_others;
+  else if($topic_pp!="null") $topic = $topic_pp;
   else if($topic_po!="") $topic = $topic_po;
   else $topic = "NA";
 
   $sql = "INSERT INTO reg (`name`, `college`, `number`, `email`, `branch`,`topic`,`event`) values('".$name."','".$college."','".$phone."','".$email."','".$branch."','".$topic."','".$event."')";
-
-  if(mysqli_query($conn,$sql) === TRUE){
+  $s = mysqli_query($conn,$sql) or die(mysqli_error());
+  if($s === TRUE){
     echo "OK";
     $to = $email;
 
@@ -65,7 +70,7 @@ if(!$error){
 
     $to = $myemail; 
     $email_subject = "Registration form submission: $name";
-    $email_body = "You have received a new Registration. "." Here are the details:\n Name: $name \n College: $college \n  Email: $email \n Phone: $phone \n Events: $event \n Branch: $branch \n Topic : $topic"; 
+    $email_body = "You have received a new Registration. "." Here are the details:\n Name: $name \n College: $college \n  Email: $email \n Phone: $phone \n Events: $event \n Branch: $branch \n Topic : $topic \n Other Topic : $topic_others"; 
     $headers = "From: $myemail\n"; 
     $headers .= "Reply-To: $email_address";
 

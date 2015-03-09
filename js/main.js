@@ -94,11 +94,13 @@
       var regBranch = $('#registerForm #regBranch').val();
       var regEventTopic_pp = $('#registerForm #regEventTopic_pp').val();
       var regEventTopic_po = $('#registerForm #regEventTopic_po').val();
+      var otherTopic_pp = $('#registerForm #OtherTopic_pp').val();
       var data = 'regName=' + regName  + '&regCollege=' + regCollege + 
                  '&regEmail=' + regEmail + '&regMobile=' + regMobile + 
                  '&regEvent=' + regEvent + '&regBranch=' + regBranch +
                  '&regEventTopic_pp=' + regEventTopic_pp +
-                 '&regEventTopic_po=' + regEventTopic_po;
+                 '&regEventTopic_po=' + regEventTopic_po +
+                 '&OtherTopic_pp=' + otherTopic_pp;
       $.ajax({
 
         type: "POST",
